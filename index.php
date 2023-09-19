@@ -41,7 +41,32 @@ Flight::route('POST /students', function(){
 });
 
 //  PUT
-Flight::route('PUT /students', function(){});
+Flight::route('PUT /students', function(){
+    $id = (Flight::request()->data->id);;
+    $full_name = (Flight::request()->data->full_name);
+    $age = (Flight::request()->data->age);
+    $enrollment = (Flight::request()->data->enrollment);
+    $address = (Flight::request()->data->address);
+    $tel = (Flight::request()->data->tel);
+    $email = (Flight::request()->data->email);
+    $gender = (Flight::request()->data->gender);
+    $comments = (Flight::request()->data->comments);
+
+    $sql = 'UPDATE students SET full_name=?, age=?, enrollment=?, address=?, tel=?, email=?, gender=?, comments=? WHERE id=?';
+    $sentence = Flight::db()->prepare($sql);
+
+    $sentence->bindParam(1, $full_name);
+    $sentence->bindParam(2, $age);
+    $sentence->bindParam(3, $enrollment);
+    $sentence->bindParam(4, $address);
+    $sentence->bindParam(5, $tel);
+    $sentence->bindParam(6, $email);
+    $sentence->bindParam(7, $gender);
+    $sentence->bindParam(8, $comments);
+    $sentence->execute();
+
+    Flight::jsonp(['Updated Student !!']);
+});
 
 //  DELETE
 Flight::route('DELETE /students', function(){});
