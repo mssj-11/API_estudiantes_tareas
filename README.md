@@ -12,6 +12,6 @@
 ##  Versions:
 *   ####    PHP & MySQL: 8.1.12
 *   ####    Composer: 2.5.7
-*   ####    Flight: 
+*   ####    Flight: 2.0.1
 
 
