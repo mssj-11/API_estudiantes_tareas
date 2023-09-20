@@ -80,7 +80,15 @@ Flight::route('DELETE /students', function(){
 });
 
 //  SEARCH BY ID
-Flight::route('GET /students/@id', function(){});
+Flight::route('GET /students/@id', function(){
+    $sql = 'SELECT * FROM students WHERE id=?';
+    $sentence = Flight::db()->prepare($sql);
+    $sentence->bindParam(1, $id);
+    $sentence->execute();
+    $students = $sentence->fetchAll(PDO::FETCH_ASSOC);
+
+    Flight::jsonp($students);
+});
 
 
 Flight::start();
