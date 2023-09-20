@@ -87,7 +87,7 @@ Flight::route('GET /students/@id', function($id){
     $sentence->execute();
     $students = $sentence->fetchAll(PDO::FETCH_ASSOC);
 
-    Flight::jsonp($students);
+    Flight::json($students);
 });
 
 
