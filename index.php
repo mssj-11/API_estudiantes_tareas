@@ -80,7 +80,7 @@ Flight::route('DELETE /students', function(){
 });
 
 //  SEARCH BY ID
-Flight::route('GET /students/@id', function(){
+Flight::route('GET /students/@id', function($id){
     $sql = 'SELECT * FROM students WHERE id=?';
     $sentence = Flight::db()->prepare($sql);
     $sentence->bindParam(1, $id);
