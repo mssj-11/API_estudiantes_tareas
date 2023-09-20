@@ -21,7 +21,7 @@
 ```sh
 https://github.com/mssj-11/API_estudiantes_tareas
 ```
-2. nstall dependencies using Composer.
+2. Install dependencies using Composer.
 ```sh
 composer install
 ```
