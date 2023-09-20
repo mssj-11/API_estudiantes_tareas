@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "2eb9ab51-81a1-42fb-a568-fa1ea1fa5b29",
+		"name": "API_STUDENTS_TASKS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25558036"
+	},
+	"item": [
+		{
+			"name": "http://localhost/APIS-Webservices/API_estudiantes_tareas/students/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/APIS-Webservices/API_estudiantes_tareas/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"APIS-Webservices",
+						"API_estudiantes_tareas",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/APIS-Webservices/API_estudiantes_tareas/tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/APIS-Webservices/API_estudiantes_tareas/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"APIS-Webservices",
+						"API_estudiantes_tareas",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
