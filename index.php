@@ -63,6 +63,7 @@ Flight::route('PUT /students', function(){
     $sentence->bindParam(6, $email);
     $sentence->bindParam(7, $gender);
     $sentence->bindParam(8, $comments);
+    $sentence->bindParam(9, $id);
     $sentence->execute();
 
     Flight::jsonp(['Updated Student !!']);
