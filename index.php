@@ -3,6 +3,11 @@ require 'flight/Flight.php';
 //  Database Connection
 Flight::register('db', 'PDO', array('mysql:host=localhost;dbname=api_estudiantes_tareas', 'root', ''));
 
+/*
+            (Address, folders, Method Address)
+    URL: http://localhost/APIS-Webservices/API_estudiantes_tareas/students
+*/
+
 /*   METHODS  */
 //  GET
 Flight::route('GET /students', function(){
