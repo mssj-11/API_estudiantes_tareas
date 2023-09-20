@@ -42,7 +42,7 @@ Flight::route('POST /students', function(){
 
 //  PUT
 Flight::route('PUT /students', function(){
-    $id = (Flight::request()->data->id);;
+    $id = (Flight::request()->data->id);
     $full_name = (Flight::request()->data->full_name);
     $age = (Flight::request()->data->age);
     $enrollment = (Flight::request()->data->enrollment);
@@ -70,7 +70,14 @@ Flight::route('PUT /students', function(){
 });
 
 //  DELETE
-Flight::route('DELETE /students', function(){});
+Flight::route('DELETE /students', function(){
+    $id = (Flight::request()->data->id);
+    $sql = 'DELETE FROM students WHERE id=?';
+    $sentence = Flight::db()->prepare($sql);
+    $sentence->bindParam(1, $id);
+    $sentence->execute();
+    Flight::jsonp(['Eliminated Student !!']);
+});
 
 //  SEARCH BY ID
 Flight::route('GET /students/@id', function(){});
